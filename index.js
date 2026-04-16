@@ -3,13 +3,12 @@ const connectionDb = require('./config/dataBase');
 
 const app = express();
 
-//Conexion a la base de datos.
 connectionDb();
 
-//Configuracion de middleware
 app.use(express.json());
 
-app.use('/api/clinic', require('./routes/ClinicPaciente'));
+app.use('/api/clinic', require('./routes/ClinicPatient'));
+app.use('/api/history', require('./routes/HistoryPatient'));
 
 app.listen(4000, () => {
     console.log("Servidor en puerto 400, iniciado");

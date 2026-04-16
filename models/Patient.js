@@ -16,7 +16,12 @@ const PacientSchema = mongoose.Schema({
     dateCreatePacient: {
         type: Date,
         default: Date.now()
-    }
+    },
+    identification: {
+        type: Number,
+        require: true,
+        unique: true
+    },
 })
 
 module.exports = mongoose.model('ClinicPatient', PacientSchema);

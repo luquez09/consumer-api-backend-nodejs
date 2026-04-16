@@ -1,4 +1,4 @@
-const Pacient = require("../models/Pacient");
+const Pacient = require("../models/Patient");
 
 exports.addPacient = async (req, res) => {
     try {
